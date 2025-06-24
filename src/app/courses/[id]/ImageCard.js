@@ -3,30 +3,34 @@
 import Image from "next/image";
 
 const ImageCard = ({ video }) => {
-    
   async function handleDownload(link, filename) {
     const response = await fetch(link);
     const blob = await response.blob();
-    
-    const url = URL.createObjectURL(blob)
-    
-    const anchor = document.createElement("a")
 
-    anchor.href = url
-    anchor.download = filename
+    const url = URL.createObjectURL(blob);
 
-    function handleOnDownload(){
-      setTimeout(() => {
-        URL.revokeObjectURL(url)
+    const anchor = document.createElement("a");
 
-        anchor.removeEventListener("click", handleOnDownload)
-      }, 150)
-      
-    }
+    anchor.href = url;
+    anchor.download = filename;
 
-    anchor.addEventListener("click", handleOnDownload, false)
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
 
-    anchor.click()
+    URL.revokeObjectURL(url);
+
+    // function handleOnDownload() {
+    //   setTimeout(() => {
+    //     URL.revokeObjectURL(url);
+
+    //     anchor.removeEventListener("click", handleOnDownload);
+    //   }, 150);
+    // }
+
+    // anchor.addEventListener("click", handleOnDownload, false);
+
+    // anchor.click();
   }
 
   return (
