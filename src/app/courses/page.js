@@ -16,7 +16,7 @@ const Courses = () => {
           ))
         }
       </div>
-      <p className='mt-8'>
+      <p className='mt-16'>
         <Link href="/" className='underline hover:text-tumeric'>Go Home</Link>
       </p>
 

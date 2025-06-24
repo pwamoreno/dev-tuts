@@ -4,10 +4,29 @@ import Image from "next/image";
 
 const ImageCard = ({ video }) => {
     
-  async function handleDownload(link) {
+  async function handleDownload(link, filename) {
     const response = await fetch(link);
     const blob = await response.blob();
-    console.log("blob", blob);
+    
+    const url = URL.createObjectURL(blob)
+    
+    const anchor = document.createElement("a")
+
+    anchor.href = url
+    anchor.download = filename
+
+    function handleOnDownload(){
+      setTimeout(() => {
+        URL.revokeObjectURL(url)
+
+        anchor.removeEventListener("click", handleOnDownload)
+      }, 150)
+      
+    }
+
+    anchor.addEventListener("click", handleOnDownload, false)
+
+    anchor.click()
   }
 
   return (
@@ -25,7 +44,7 @@ const ImageCard = ({ video }) => {
         <p>
           <button
             className="text-forest text-sm underline hover:text-tumeric cursor-pointer"
-            onClick={() => handleDownload(video.videoUrl)}
+            onClick={() => handleDownload(video.videoUrl, video.title)}
           >
             Download
           </button>

@@ -27,7 +27,7 @@ export const courses = [
     id: "test1",
     title: "Ah ah testing testing",
     author: "The Ghoul of the Family",
-    duration: "20 min",
+    duration: "1 min",
     category: "Tester",
     image: "/img4.png"
   }
@@ -79,10 +79,10 @@ export const courseContents = {
     "test1": [
         {
             id: "tst1Lec1",
-            title: "Lecture 1: Just an image",
+            title: "Test Lecture 1: Welcome to Class",
             duration: "short",
             thumb: "/img4.png",
-            videoUrl: "https://res.cloudinary.com/dev-tuts/video/upload/py1Lec1.mp4"
+            videoUrl: "https://res.cloudinary.com/dta1affwu/video/upload/v1750797706/dev-tuts-testing_wcojl5.mov"
         }
     ]
 }
