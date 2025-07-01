@@ -51,7 +51,7 @@ const DownloadVideo = ({ video }) => {
     const anchor = document.createElement("a");
 
     anchor.href = url;
-    anchor.download = filename + ".jpg";
+    anchor.download = filename + ".mp4";
 
     // document.body.appendChild(anchor);
     // anchor.click();
