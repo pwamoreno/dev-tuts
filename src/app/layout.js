@@ -23,11 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen grid grid-rows-[auto_1fr_auto]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

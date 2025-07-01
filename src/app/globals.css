@@ -10,15 +10,15 @@
   --shadow-color: #0C1F21; */
 }
 
-@theme{
-  --color-cream: #E4D8CA;
-  --color-cream-shade: #C5AB91;
-  --color-rust: #BA6B49;
-  --color-rust-shade: #A35539;
-  --color-tumeric: #D3995D;
-  --color-tumeric-shade: #BD7F4C;
-  --color-forest: #15362F;
-  --color-forest-shade: #0D1F21;
+@theme {
+  --color-cream: #e4d8ca;
+  --color-cream-shade: #c5ab91;
+  --color-rust: #ba6b49;
+  --color-rust-shade: #a35539;
+  --color-tumeric: #d3995d;
+  --color-tumeric-shade: #bd7f4c;
+  --color-forest: #15362f;
+  --color-forest-shade: #0d1f21;
 }
 
 @theme inline {
@@ -30,12 +30,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #15362F;
+    --background: #15362f;
     --foreground: #ededed;
   }
 }
-html, body {
-  height: 100%;
+html,
+body {
+  @apply h-full;
 }
 
 body {
