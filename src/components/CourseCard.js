@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CourseCard({ course }) {
   return (
-    <div className="bg-cream rounded-lg shadow p-4">
+    <div className="bg-cream rounded-lg shadow p-4 max-md:flex max-md:flex-col max-md:items-center">
       <Image
         src={course.image}
         alt={course.title}

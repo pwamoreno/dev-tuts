@@ -16,10 +16,9 @@ const CoursePage = async ({ params }) => {
   if (!course || !videos) return <div>Course not Found</div>;
 
   return (
-    <div>
-
+    <div className="mx-5">
       <h1 className="mt-8 text-xl font-bold">{course.title}</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-4 max-md:grid-cols-1 gap-6">
         {videos.map((video) => (
           <ImageCard key={video.id} video={video} course={course}/>
         ))}

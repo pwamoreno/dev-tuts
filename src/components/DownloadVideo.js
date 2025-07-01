@@ -73,15 +73,15 @@ const DownloadVideo = ({ video }) => {
   }
 
   return (
-    <div>
+    <div className="mx-5">
       <div className="flex items-center ">
-        <div className="rounded-lg overflow-hidden relative flex-none">
+        <div className="w-[500px] h-[400px] rounded-lg overflow-hidden relative flex-none max-md:w-[350px] md:h-[200px]">
           <Image
             src={video.thumb}
             alt={video.title}
-            width={500}
-            height={400}
-            // fill
+            // width={300}
+            // height={200}
+            fill
             className="object-cover"
           />
           <div className="flex flex-col items-center pt-4">
