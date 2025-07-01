@@ -82,7 +82,7 @@ export const courseContents = {
             title: "Test Lecture 1: Welcome to Class",
             duration: "short",
             thumb: "/img4.png",
-            videoUrl: "https://res.cloudinary.com/dta1affwu/video/upload/f_jpg/v1750797706/dev-tuts-testing_wcojl5.mov"
+            videoUrl: "https://res.cloudinary.com/dta1affwu/video/upload/v1750797706/dev-tuts-testing_wcojl5.mov"
         }
     ]
 }
